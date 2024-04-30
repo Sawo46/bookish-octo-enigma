@@ -10,7 +10,7 @@ import utilita.ConsoleInput;
 import utilita.Menu;
 import utilita.Ordinatore;
 
-public class App {
+public class Main {
     public static void main(String[] args){
        
         String[] vociMenu;
@@ -232,6 +232,16 @@ public class App {
                     }
                     catch (FileException ex) {
                         System.out.println("ERRORE file aperto in lettura!");
+                    }
+                }
+                case 8 -> {
+                    try {
+                        //importa da file CSV
+                        s1.ImportCSV(nomeFile);
+                        System.out.println("Importazione avvenuta con successo!");
+                    }
+                    catch (IOException ex) {
+                        System.out.println("ERRORE di lettura impossibile accedere al file!");
                     }
                 }
             }  
